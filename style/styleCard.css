@@ -1,0 +1,427 @@
+/* Кнопка назад */
+.back-button {
+  margin: 20px; /* Отступ для кнопки "Назад" */
+}
+
+.back-button button {
+  padding: 10px 20px; /* Внутренние отступы для кнопки */
+  border: none; /* Убираем границы (если не нужны) */
+  background-color: black; /* Чёрный цвет фона */
+  color: white; /* Белый цвет текста */
+  border-radius: 8px; /* Скругление углов */
+  cursor: pointer; /* Указатель курсора */
+  font-size: 16px; /* Размер шрифта */
+  transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+.back-button button:hover {
+  background-color: darkgray; /* Изменяем цвет фона при наведении */
+}
+
+/* Основной контейнер */
+.containerinfo {
+  display: flex; /* Используем Flexbox для размещения текста и изображений */
+  align-items: flex-start; /* Выравнивание по верхнему краю */
+  margin: 10px;
+}
+
+/* Дочерние контейнеры */
+.text-container {
+  flex: 2; /* Занимает 1 часть доступного пространства */
+  margin-right: 20px; /* Отступ между текстом и изображениями */
+  margin-left: 50px;
+}
+
+/* Слайдер */
+.image-slider {
+  position: relative; /* Для абсолютного позиционирования стрелок */
+  flex: 1; /* Занимает 2 части доступного пространства */
+  width: 40vw;
+  height: 90vh; /* Высота составляет 90% от высоты экрана */
+  max-width: 100%; /* Максимальная ширина */
+}
+
+/* Отображение только одного фото */
+.image-container {
+  display: none; /* Скрывать все изображения по умолчанию */
+  width: 100%; /* Ширина составляет 100% */
+  height: auto;
+}
+
+.image-container.active {
+  display: block; /* Отображаем только активное изображение */
+}
+
+.image-container img {
+  width: 100%; /* Изображение занимает всю ширину контейнера */
+  height: 100%; /* Высота занимает весь контейнер */
+  object-fit: cover; /* Сохранение пропорций */
+}
+
+/* Стрелочки */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  border: none;
+  padding: 10px;
+}
+
+.arrow.left {
+  left: 10px; /* Позиция левой стрелки */
+}
+
+.arrow.right {
+  right: 10px; /* Позиция правой стрелки */
+}
+
+@media (max-width: 1024px) {
+  .containerinfo {
+    flex-direction: column; /* Располагаем элементы друг под другом на маленьких экранах */
+    align-items: center;
+  }
+
+  .text-container {
+    margin-right: 0; /* Убираем отступ при укладке */
+    margin-left: 0; /* Убираем отступ слева */
+    text-align: center; /* Центрируем текст для лучшей читаемости */
+  }
+
+  .image-slider {
+    width: 100%; /* Ширина слайдера для мобильных */
+    height: auto; /* Позволяем высоте автоматически подстраиваться */
+  }
+}
+
+.white-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(255, 255, 255); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.blackwhite-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background: linear-gradient(
+    to right,
+    black 50%,
+    white 50%
+  ); /* Градиент фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.pink-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(255, 0, 200); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.grey-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(146, 146, 146); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.cian-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(0, 217, 255); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.purpur-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(101, 15, 128); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.forestgreen-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(48, 128, 95); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.lightolive-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(94, 129, 77); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.blue-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(77, 120, 199); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.darkred-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(128, 34, 22); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.cream-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(235, 213, 184); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.red-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(255, 0, 0); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.olive-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(40, 61, 30); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.black-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(0, 0, 0); /* Цвет фона */
+  border-color: rgb(0, 0, 0);
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.purple-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(84, 72, 255); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.creembrown-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(121, 94, 94); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.brown-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(73, 53, 53); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.green-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(9, 110, 52); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.salat-circle-button {
+  width: 3em; /* Ширина кнопки */
+  height: 3em; /* Высота кнопки */
+  background-color: rgb(0, 211, 88); /* Цвет фона */
+  border-color: black;
+  border-width: 3px;
+  border-radius: 50%; /* Скругляем углы до круга */
+  cursor: pointer; /* Указатель курсора */
+  align-items: center; /* Выравнивание по вертикали */
+  justify-content: center; /* Выравнивание по горизонтали */
+  margin: 10px;
+}
+
+.buy-button {
+  width: 20em; /* Ширина кнопки */
+  height: 5em; /* Высота кнопки */
+  background-color: white;
+  cursor: pointer; /* Указатель курсора */
+  margin: 10px;
+  justify-content: center;
+}
+
+.buy-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.d-flex-button {
+  display: grid;
+  place-items: center; /* Центрирование по обоим осям */
+  margin: 20px 0; /* Опционально: задает отступы сверху и снизу */
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px; /* Можно настроить под ваши нужды */
+  position: relative;
+  margin: auto; /* Центрировать по горизонтали */
+  max-height: 80vh; /* Максимальная высота модального окна */
+  overflow-y: auto; /* Добавить вертикальный скроллинг */
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.box {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.button-modal {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button-modal:hover {
+  background-color: #45a049;
+}
+
+body.modal-open {
+  overflow: hidden; /* Prevent body scrolling when modal is open */
+}

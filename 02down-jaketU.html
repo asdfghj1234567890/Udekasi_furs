@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udekasi furs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-Icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/Icon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/Icon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="style/styleAll.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand p-0 mx-25" href="/indexU.html">
+          <img src="/nav-UDEKASI.png" alt="Логотип" width="150" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/indexU.html"
+                >Головна</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="02down-jaketU.html">Пуховики</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="03coatU.html">Пальто</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="04fur-coatU.html">Шуби</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="05leather-jacketU.html"
+                >Шкіряні куртки</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="06vestU.html">Жилети</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="07bagU.html">Сумки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="08furs-acsU.html">Хутряні аксессуари</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="09scirtU.html">Юбки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="10trousersU.html">Брюки</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="btn btn-outline-light dropdown-toggle"
+                id="languageDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Мова
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="02down-jaket.html"
+                    data-lang="ru"
+                    >Русский</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="02down-jaketU.html"
+                    data-lang="uk"
+                    >Українська</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="02down-jaketE.html"
+                    data-lang="en"
+                    >English</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <button
+      class="btn btn-outline-dark"
+      data-bs-toggle="modal"
+      data-bs-target="#filterModal"
+      style="margin: 20px"
+    >
+      Фільтр
+    </button>
+
+    <input
+      type="text"
+      id="searchInput"
+      class="form-control"
+      placeholder="Пошук за назвою або номером"
+      style="margin: 20px; width: 300px; display: inline-block"
+    />
+
+    <div
+      class="modal fade"
+      id="filterModal"
+      tabindex="-1"
+      aria-labelledby="filterModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="filterModalLabel">Фільтри</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="filterForm">
+              <div class="filter-group">
+                <h3>Стать</h3>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="gender"
+                    value="male"
+                    onclick="filterProducts()"
+                  />
+                  Чоловіче </label
+                ><br />
+                <label>
+                  <input
+                    type="checkbox"
+                    name="gender"
+                    value="female"
+                    onclick="filterProducts()"
+                  />
+                  Жіноче
+                </label>
+              </div>
+
+              <div class="filter-group">
+                <h3>Доступність</h3>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="availability"
+                    value="in_stock"
+                    onclick="filterProducts()"
+                  />
+                  Є на складі </label
+                ><br />
+                <label>
+                  <input
+                    type="checkbox"
+                    name="availability"
+                    value="preorder"
+                    onclick="filterProducts()"
+                  />
+                  На замовлення
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="resetFilters">
+              Скинути фільтри
+            </button>
+            <button type="button" class="btn btn-primary" id="applyFilters">
+              Застосувати фільтри
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-container">
+      <div
+        class="product-card"
+        onclick="location.href='0201/0201U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="001"
+      >
+        <img src="img02/5487-1.jpg" alt="Товар 1" />
+        <h2>Пуховик 5487</h2>
+        <p>5 999 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0202/0202U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="002"
+      >
+        <img src="img02/5495-1.jpg" alt="Товар 2" />
+        <h2>Пуховик 5495</h2>
+        <p>10 999 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0203/0203U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="003"
+      >
+        <img src="img02/5512-1.jpg" alt="Товар 3" />
+        <h2>Пуховик 5512</h2>
+        <p>12 999 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0204/0204U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="004"
+      >
+        <img src="img02/5516-1.jpg" alt="Товар 4" />
+        <h2>Пуховик 5516</h2>
+        <p>9 999 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0205/0205U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="005"
+      >
+        <img src="img02/5520-20.jpg" alt="Товар 5" />
+        <h2>Пуховик 5520</h2>
+        <p>6 999 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0206/0206U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="006"
+      >
+        <img src="img02/5538-1.jpg" alt="Товар 6" />
+        <h2>Пуховик 5538</h2>
+        <p>10 999 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0207/0207U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="007"
+      >
+        <img src="img02/5559-1.jpg" alt="Товар 7" />
+        <h2>Пуховик 5559</h2>
+        <p>9 499 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0208/0208U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="008"
+      >
+        <img src="img02/5560-4.jpg" alt="Товар 8" />
+        <h2>Пуховик 5560</h2>
+        <p>14 000 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0209/0209U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="009"
+      >
+        <img src="img02/5565-17.jpg" alt="Товар 9" />
+        <h2>Пуховик 5565</h2>
+        <p>13 999 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0210/0210U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="010"
+      >
+        <img src="img02/5607-1.jpg" alt="Товар 10" />
+        <h2>Пуховик 5607</h2>
+        <p>12 999 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0211/0211U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="011"
+      >
+        <img src="img02/5621-1.jpg" alt="Товар 11" />
+        <h2>Пуховик 5621</h2>
+        <p>9 999 грн</p>
+      </div>
+      <div
+        class="product-card"
+        onclick="location.href='0212/0212U.html';"
+        data-gender="female"
+        data-availability="in_stock"
+        data-number="012"
+      >
+        <img src="img02/5624-1.jpg" alt="Товар 12" />
+        <h2>Пуховик 5624</h2>
+        <p>7 999 грн</p>
+      </div>
+
+    <script src="script/scriptAll.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+.product-card {
+  height: 90vh;
+  min-height: 150px;
+  width: auto;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card img {
+  width: auto;
+  height: 83%;
+  object-fit: cover;
+  transition: opacity 0.3s;
+}
+
+.product-card:hover img {
+  opacity: 0.7;
+}
+
+.product-card h2,
+.product-card p {
+  margin: 5px 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Медиазапрос для планшетов (768px и меньше) */
+@media (max-width: 768px) {
+  .product-card {
+    width: 45vw;
+    min-height: 120px;
+  }
+}
+
+/* Медиазапрос для телефонов (480px и меньше) */
+@media (max-width: 480px) {
+  .product-card {
+    width: 90vw;
+    min-height: 100px;
+  }
+}

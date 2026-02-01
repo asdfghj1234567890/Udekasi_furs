@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Udekasi furs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-Icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/Icon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/Icon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="../style/styleCard.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand p-0 mx-25" href="../index.html">
+          <img src="../nav-UDEKASI.png" alt="" width="150" loading="lazy" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="../02down-jaket.html"
+                >Пуховики</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../03coat.html">Пальто</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../04fur-coat.html">Шубы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../05leather-jacket.html"
+                >Кожаные куртки</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../06vest.html">Жилеты</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../07bag.html">Сумки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../08furs-acs.html"
+                >Меховые аксессуары</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../09scirt.html">Юбки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../10trousers.html">Брюки</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="btn btn-outline-light dropdown-toggle"
+                id="languageDropdown"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Язык
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                <li>
+                  <a class="dropdown-item" href="0207.html" data-lang="ru"
+                    >Русский</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="0207U.html" data-lang="uk"
+                    >Українська</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="0207E.html" data-lang="en"
+                    >English</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="back-button">
+      <button onclick="location.href = '../02down-jaket.html'">Назад</button>
+    </div>
+
+    <div class="containerinfo">
+      <div class="image-slider" id="container1">
+        <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="image-container active">
+          <img
+            src="../img02/5559-1.jpg"
+            alt="Изображение товара 1"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-2.jpg"
+            alt="Изображение товара 2"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-3.jpg"
+            alt="Изображение товара 3"
+            loading="lazy"
+          />
+        </div>
+
+        <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+
+      <div class="image-slider" id="container2" style="display: none">
+        <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="image-container active">
+          <img
+            src="../img02/5559-4.jpg"
+            alt="Изображение товара 1"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-5.jpg"
+            alt="Изображение товара 2"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-6.jpg"
+            alt="Изображение товара 3"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-7.jpg"
+            alt="Изображение товара 4"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-8.jpg"
+            alt="Изображение товара 5"
+            loading="lazy"
+          />
+        </div>
+        <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+
+      <div class="image-slider" id="container3" style="display: none">
+        <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="image-container active">
+          <img
+            src="../img02/5559-9.jpg"
+            alt="Изображение товара 1"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-10.jpg"
+            alt="Изображение товара 2"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-11.jpg"
+            alt="Изображение товара 3"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-12.jpg"
+            alt="Изображение товара 4"
+            loading="lazy"
+          />
+        </div>
+        <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+
+      <div class="image-slider" id="container4" style="display: none">
+        <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="image-container active">
+          <img
+            src="../img02/5559-13.jpg"
+            alt="Изображение товара 1"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-14.jpg"
+            alt="Изображение товара 2"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-container">
+          <img
+            src="../img02/5559-15.jpg"
+            alt="Изображение товара 3"
+            loading="lazy"
+          />
+        </div>
+        <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+
+      <div class="image-slider" id="container5" style="display: none"></div>
+
+      <div class="image-slider" id="container6" style="display: none"></div>
+
+      <div class="text-container">
+        <h1>Пуховик 5559</h1>
+        <p>
+          Состав верхней лицевой ткани полиамид 100%. Состав пуховой мембраны
+          полиэстер 100%. Состав подкладочной ткани 100% полиэстер. Наполнитель:
+          пух лебяжий, натуральный, белый, качество премиум класса, обработан и
+          отчищен при высоких температурах паром, антиаллергенный. Фурнитура
+          молнии YKK. Предназначен для температуры от +5 до -20.
+        </p>
+
+        <div class="d-flex justify-content-center flex-wrap">
+          <button
+            class="cream-circle-button"
+            onclick="toggleContainers(1)"
+          ></button>
+          <button
+            class="blue-circle-button"
+            onclick="toggleContainers(2)"
+          ></button>
+          <button
+            class="red-circle-button"
+            onclick="toggleContainers(3)"
+          ></button>
+          <button
+            class="purpur-circle-button"
+            onclick="toggleContainers(4)"
+          ></button>
+        </div>
+        <div class="d-flex-button">
+          <button class="buy-button" id="openModal">Купить сейчас</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Форма начало Форма начало Форма начало Форма начало Форма начало Форма начало Форма начало -->
+    <div class="modal" id="myModal" style="display: none">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="f3bde004-51b7-4138-85ba-fa6bdf754a4f"
+          />
+
+          <input type="hidden" name="Номер модели 5559" />
+
+          <span>ФИО</span>
+          <input
+            type="text"
+            name="ФИО"
+            class="box"
+            required
+            placeholder="Введите ФИО"
+            autocomplete="off"
+          />
+
+          <span>Номер телефона:</span>
+          <input
+            type="number"
+            name="Номер телефона"
+            class="box"
+            required
+            placeholder="Введите номер телефона"
+            autocomplete="off"
+          />
+
+          <span>Размер</span>
+          <select name="Размер" class="box" required>
+            <option value="" disabled selected></option>
+            <option value="xs">XS</option>
+            <option value="s">S</option>
+            <option value="m">M</option>
+            <option value="l">L</option>
+            <option value="xl">XL</option>
+            <option value="xxl">XXL</option>
+            <option value="xxxl">XXXL</option>
+          </select>
+
+          <span>Цвет</span>
+          <select name="Цвет" class="box" required>
+            <option value="" disabled selected></option>
+            <option value="Кремовый">Кремовый</option>
+            <option value="Синий">Синий</option>
+            <option value="Красный">Красный</option>
+            <option value="Фиолетовый">Фиолетовый</option>
+          </select>
+
+          <span>Рост:</span>
+          <input
+            type="number"
+            name="Рост"
+            class="box"
+            required
+            placeholder="Введите ваш рост"
+            autocomplete="off"
+          />
+
+          <span>Обхват по груди:</span>
+          <input
+            type="number"
+            name="Обхват по груди"
+            class="box"
+            required
+            placeholder="Введите обхват груди"
+            autocomplete="off"
+          />
+
+          <span>Обхват по бёдрам:</span>
+          <input
+            type="number"
+            name="Обхват по бёдрам"
+            class="box"
+            required
+            placeholder="Введите обхват бёдер"
+            autocomplete="off"
+          />
+
+          <span>Способ доставки:</span>
+          <select
+            name="Способ доставки"
+            id="delivery"
+            onchange="showOptions()"
+            class="box"
+            required
+          >
+            <option value="" disabled selected></option>
+            <option value="Самовывоз">Самовывоз</option>
+            <option value="Доставка на отделение Новой Почты">
+              Доставка на отделение Новой Почты
+            </option>
+            <option value="Адресная доставка Новой Почты">
+              Адресная доставка
+            </option>
+            <option value="Доставка за границу">Доставка за границу</option>
+          </select>
+
+          <div id="pickupOptions" style="display: none">
+            <span>Способ оплаты:</span>
+            <select name="Способ оплаты" class="box">
+              <option value="" disabled selected></option>
+              <option value="Наличными на месте">Наличными на месте</option>
+              <option value="Оплата на счёт">Оплата на счёт</option>
+            </select>
+            <p>
+              ВНИМАНИЕ: самовывоз возможен только из города Ивано-Франковск.
+            </p>
+            <p>
+              После нажатия конпки 'Заказать', с вами свяжется менеджер для
+              подтверждения заказа.
+            </p>
+          </div>
+
+          <div id="novaPoshtaOptions" style="display: none">
+            <span>Область:</span>
+            <input
+              type="text"
+              name="Область"
+              class="box"
+              placeholder="Введите область"
+              autocomplete="off"
+            />
+
+            <span>Город:</span>
+            <input
+              type="text"
+              name="Город"
+              class="box"
+              placeholder="Введите город"
+              autocomplete="off"
+            />
+
+            <span>Отделение почты:</span>
+            <input
+              type="text"
+              name="Отделение почты"
+              class="box"
+              placeholder="Введите номер отделения"
+              autocomplete="off"
+            />
+
+            <span>Способ оплаты:</span>
+            <select name="Способ оплаты" class="box">
+              <option value="" disabled selected></option>
+              <option value="Наложенный платеж">Наложенный платеж</option>
+              <option value="Оплата по счёту">Оплата по счёту</option>
+            </select>
+            <p>
+              После нажатия конпки 'Заказать', с вами свяжется менеджер для
+              подтверждения заказа.
+            </p>
+          </div>
+
+          <div id="novaPoshtaAdressOptions" style="display: none">
+            <span>Область:</span>
+            <input
+              type="text"
+              name="Область адресной доставки"
+              class="box"
+              placeholder="Введите область"
+              autocomplete="off"
+            />
+
+            <span>Город:</span>
+            <input
+              type="text"
+              name="Город адресной доставки"
+              class="box"
+              placeholder="Введите город"
+              autocomplete="off"
+            />
+
+            <span>Район:</span>
+            <input
+              type="text"
+              name="Район"
+              class="box"
+              placeholder="Введите район"
+              autocomplete="off"
+            />
+
+            <span>Улица, номер дома:</span>
+            <input
+              type="text"
+              name="Улица, номер дома"
+              class="box"
+              placeholder="Введите улицу и номер"
+              autocomplete="off"
+            />
+
+            <span>Этаж, квартира:</span>
+            <input
+              type="text"
+              name="Этаж, квартира"
+              class="box"
+              placeholder="Введите этаж и квартиру"
+              autocomplete="off"
+            />
+            <p>
+              ВНИМАНИЕ: при выборе адресной доставки, необходимо 100%
+              предоплаты.
+            </p>
+            <p>
+              После нажатия конпки 'Заказать', с вами свяжется менеджер для
+              подтверждения заказа.
+            </p>
+          </div>
+
+          <div id="countryPostOptions" style="display: none">
+            <span>Страна:</span>
+            <input
+              type="text"
+              name="Страна"
+              class="box"
+              placeholder="Введите страну"
+              autocomplete="off"
+            />
+
+            <span>Область:</span>
+            <input
+              type="text"
+              name="Область заграничной доставки"
+              class="box"
+              placeholder="Введите область"
+              autocomplete="off"
+            />
+
+            <span>Город:</span>
+            <input
+              type="text"
+              name="Город заграничной доставки"
+              class="box"
+              placeholder="Введите город"
+              autocomplete="off"
+            />
+
+            <span>Район:</span>
+            <input
+              type="text"
+              name="Район заграничной доставки"
+              class="box"
+              placeholder="Введите район"
+              autocomplete="off"
+            />
+
+            <span>Улица, номер дома:</span>
+            <input
+              type="text"
+              name="Улица, номер дома заграничной доставки"
+              class="box"
+              placeholder="Введите улицу и номер"
+              autocomplete="off"
+            />
+
+            <span>Этаж, квартира:</span>
+            <input
+              type="text"
+              name="Этаж, квартира заграничной доставки"
+              class="box"
+              placeholder="Введите этаж и квартиру"
+              autocomplete="off"
+            />
+            <p>
+              ВНИМАНИЕ: при выборе заграничной доставки, необходимо 100%
+              предоплаты.
+            </p>
+            <p>
+              После нажатия конпки 'Заказать', с вами свяжется менеджер для
+              подтверждения заказа и обсуждения методов доставки.
+            </p>
+          </div>
+
+          <button type="submit" class="button-modal">Заказать</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../script/scriptCard.js"></script>
+  </body>
+</html>

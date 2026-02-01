@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  overflow: auto;
+}
+
+.carousel {
+  position: relative;
+  height: 85vh; /* Высота карусели */
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  width: calc(100% * 2); /* Ширина на 8 изображений */
+  animation: slide 30s infinite linear; /* Круглая анимация */
+}
+
+.carousel-inner img {
+  width: 30vw; /* Каждый изображение занимает 1/8 ширины окна */
+  height: 85vh; /* Высота изображений совпадает с высотой карусели */
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-50%); /* Полное смещение на 8 изображений */
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 1024px) {
+  .carousel-inner {
+    width: calc(100% * 4); /* Ширина на 8 изображений */
+    animation: slide 30s infinite linear; /* Скорость остается постоянной */
+  }
+
+  .carousel-inner img {
+    width: 40vw; /* Держим пропорции для изображений */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-inner {
+    width: calc(100% * 6); /* Ширина на 8 изображений */
+    animation: slide 30s infinite linear; /* Скорость остается постоянной */
+  }
+
+  .carousel-inner img {
+    width: 50vw; /* Держим пропорции для изображений */
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-inner {
+    width: calc(100% * 12); /* Ширина на 8 изображений */
+    animation: slide 30s infinite linear; /* Держим скорость постоянной */
+  }
+
+  .carousel-inner img {
+    width: 100vw; /* Пропорциональная ширина для мобильных */
+  }
+}
+
+.footer {
+  background-color: black; /* Цвет фона */
+  color: white; /* Цвет текста */
+  padding: 50px; /* Отступы */
+  text-align: center; /* Центрирование текста */
+}
+
+.links {
+  display: flex; /* Группировка ссылок */
+  justify-content: center; /* Центрирование */
+  flex-wrap: wrap; /* Перенос на новую строку */
+}
+
+.links a {
+  color: white; /* Цвет ссылок */
+  text-decoration: none; /* Удаление подчеркивания */
+  margin: 0 10px; /* Отступ между ссылками */
+}
+
+.links a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+@media (max-width: 576px) {
+  .links {
+    flex-direction: column; /* Вертикально на мобильных */
+    align-items: center; /* Центрирование элементов */
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
